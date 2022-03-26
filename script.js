@@ -36,7 +36,59 @@ function generatePassword(){
     validatedLowercase = confirm ("Will it have Lowercase letters?")
   }; 
 
+  if (!validatedCharacter && ! validatedNumber && validatedUppercase && validatedLowercase) {
+    //
+  }
+  else if (validatedCharacter && ! validatedNumber && validatedUppercase && validatedLowercase) {
+    // choices 
+  }
+  else if (validatedCharacter && validatedNumber && validatedUppercase) {
+    //
+  }
+  else if (validatedCharacter && validatedNumber && validatedLowercase) {
+    //
+  }
+  else if (validatedCharacter && validatedLowercase && validatedUppercase) {
+    //
+  }
+  else if (validatedNumber && validatedLowercase && validatedUppercase) {
+    //
+  }
+  else if (validatedCharacter && validatedNumber) {
+    //
+  }
+  else if (validatedCharacter && validatedLowercase) {
+    //
+  }
+  else if (validatedCharacter && validatedUppercase) {
+    //
+  }
+  else if (validatedLowercase && validatedNumber) {
+    //
+  }
+  else if (validatedLowercase && validatedUppercase) {
+    //
+  }
+  else if (validatedNumber && validatedUppercase) {
+    //
+  }
+  else if (validatedCharacter) {
+    // 
+  }
+  else if (validatedNumber) {
+    //
+  }
+  else if (validatedLowercase) {
+    //
+  }
+  else if (validatedUppercase) {
+    //
+  };
 
+  var = password = [];
+
+  for (var i = 0; i < person; i++) {
+    var pickChoices = choices[Math.floor(Math.randon() * choice.length)]; 
   }
   // - password length 8 < 128
   // - Lowercase, uppercase, number, special characters 
