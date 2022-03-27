@@ -1,11 +1,10 @@
 // Assignment Code
+//Assign variables
 var generateBtn = document.querySelector("#generate");
 var validatedNumber; 
 var validatedCharacter; 
 var validatedUppercase; 
 var validatedLowercase; 
-
-//Values for Characters 
 
 character = ["!", "'", "#", "$","%", "&", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]"];
 //
@@ -21,18 +20,18 @@ letters.forEach(element => {
   space.push(element.toUpperCase());
 });
 
-
+//function made to orchestrate all inputs based on user selection
 function generatePassword(){
   console.log("Clicked Button"); 
-  // 1. Prompt the user for criteria 
+  // Prompt the user for criteria 
   let person = prompt("What kind of characters would you like for your password? Decide between 8 and 128", "Lemon Chiffon"); 
   if (!person) {
     alert("Need a Value");
-    //making an "else if" statment for the password length
+    //making an "else if" statment for the password length -  password length 8 < 128
   } else if (person < 8 || person > 128) {
-    // Validation 
+      
     person = prompt("You must choose between 8 and 128 characters");
-
+    //validation process 
   } else {
     validatedNumber = confirm("will it have numbers?");
     validatedCharacter = confirm("will it have special characters?");
@@ -98,11 +97,7 @@ function generatePassword(){
   var ps = password.join("");
   Userinput(ps);
 
-  // - password length 8 < 128
-  // - Lowercase, uppercase, number, special characters 
-  // 2. Validate the input 
-  // 3. Generate password based on criteria 
-  // 4. display password to the page.
+
 
   return ps; 
 }

@@ -1,5 +1,12 @@
 # password-generator
 
 ### objective 
-create a password generator for user. to output a password with the users wanted selection such as special characters, numbers, letters
+Create a password generator based on users selections such as special characters, numbers, letters, etc. 
+
+## Screenshots
+![Displays Prompts](./assets/)
+![Displays Prompts](./assets/)
+![Displays Prompts](./assets/)
+
+
 
