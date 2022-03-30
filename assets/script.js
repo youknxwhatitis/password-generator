@@ -6,25 +6,28 @@ var validatedCharacter;
 var validatedUppercase; 
 var validatedLowercase; 
 
-character = ["!", "'", "#", "$","%", "&", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]"];
+character = ["!", "'", "#", "$", "%", "&", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]"];
 //
-number = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
-const space = [];
+space = [];
 
 var selection; 
-//turns letters to uppercase
-letters.forEach(element => {
-  space.push(element.toUpperCase());
-});
+
+var toUpper = function (x) {
+  return x.toUpperCase();
+};
+
+letters2 = letters.map(toUpper);
+
 
 //function made to orchestrate all inputs based on user selection
-function generatePassword(){
+function generatePassword() {
   console.log("Clicked Button"); 
   // Prompt the user for criteria 
-  let person = prompt("What kind of characters would you like for your password? Decide between 8 and 128", "Lemon Chiffon"); 
+  person = parseInt(prompt("What kind of characters would you like for your password? Decide between 8 and 128", "20")); 
   if (!person) {
     alert("Need a Value");
     //making an "else if" statment for the password length -  password length 8 < 128
@@ -39,12 +42,14 @@ function generatePassword(){
     validatedLowercase = confirm ("Will it have Lowercase letters?");
   }; 
 
-  if (!validatedCharacter && validatedNumber && validatedUppercase && validatedLowercase) {
+  if (!validatedCharacter && !validatedNumber && !validatedUppercase && !validatedLowercase) {
     selection = alert("You most have an input value!");
 
   }
   else if (validatedCharacter && validatedNumber && validatedUppercase && validatedLowercase) {
     selection = character.concat(number, letters, letters2);
+
+    
   }
   else if (validatedCharacter && validatedNumber && validatedUppercase) {
     selection = character.concat(number, letters2);
@@ -62,7 +67,7 @@ function generatePassword(){
     selection = character.concat(number);
   }
   else if (validatedCharacter && validatedLowercase) {
-    selection = character.concat(letter);
+    selection = character.concat(letters);
   }
   else if (validatedCharacter && validatedUppercase) {
     selection = character.concat(letters2)
@@ -89,8 +94,11 @@ function generatePassword(){
     selection = space.concat(letters2);
   };
 
+
+
   for (var i = 0; i < person; i++) {
     var pickSelection = selection[Math.floor(Math.random() * selection.length)]; 
+    password.push(pickSelection); 
   }
 
   var password = []; 
@@ -110,8 +118,7 @@ function Userinput(ps) {
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-  // ps = generatePassword();
-  // document.getElementById("password").placeholder = ps; 
+  document.getElementById("password").placeholder = ps; 
   passwordText.value = password;
 
 }
