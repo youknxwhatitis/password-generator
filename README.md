@@ -5,10 +5,10 @@ Create a password generator based on users selections such as special characters
 
 ## Screenshots
 ### Prompt Display 
-![Displays Prompts](./assets/prompt-display.png)
+![Displays Prompts](./assets/readme-images/prompt-display.png)
 
 ### Prompt for no value input
-![Displays Prompts](./assets/no-input-by-user.png)
+![Displays Prompts](./assets/readme-images/no-input-by-user.png)
 
 ### Prompts displayed for User to choose criteria for their password
 ![Display prompts](./assets/readme-images/prompts.png)
