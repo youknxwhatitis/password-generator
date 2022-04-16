@@ -12,5 +12,6 @@ Create a password generator based on users selections such as special characters
 
 
 Link for deployed page 
+https://passwordgeneratoret.netlify.app
 
 
